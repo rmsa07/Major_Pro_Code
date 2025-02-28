@@ -36,7 +36,7 @@ int calculateTravelTime(const Customer &a, const Customer &b) {
     // Euclidean distance, can be adjusted for other distances
     return sqrt((a.x - b.x)*(a.x - b.x) + (a.y - b.y)*(a.y - b.y));
 }
-//ok
+//ok updated
 // Evaluate Solution Fitness
 Solution evaluateSolution(const std::vector<Route> &routes, const std::vector<Customer> &customers) {
     Solution solution;
@@ -66,7 +66,7 @@ Solution evaluateSolution(const std::vector<Route> &routes, const std::vector<Cu
 }
 
 
-//ok
+//ok updated
 bool canInsertAtPosition(
     const Route& route,  // Pass by reference to avoid copying
     const std::vector<Customer>& customers,
@@ -112,6 +112,7 @@ bool canInsertAtPosition(
     return true;
 }
 
+// small functionality later
 
 Solution Better(const Solution &parent1, const Solution &parent2,int obj){
     if(obj == 1){ // vehicle min
@@ -138,7 +139,7 @@ bool is_unique_child(const Solution child , const vector<Solution>&population){
      return true;
 }
 
-//ok
+//ok updated
 void calculateCrowdingDistance(vector<Solution> &front) {
     int frontSize = front.size();
     if (frontSize <= 2) {
@@ -199,7 +200,7 @@ void calculateCrowdingDistance(vector<Solution> &front) {
 }
 
 
-// ok
+//ok updated
 Solution crossover(const Solution &parent1, const Solution &parent2, const vector<Customer> &customers, int vehicleCapacity, int depotCloseTime, int objective) {
     Solution child;
     set<int> visitedCustomers;
@@ -299,7 +300,7 @@ Solution crossover(const Solution &parent1, const Solution &parent2, const vecto
     return evaluateSolution(childRoutes, customers);
 }
 
-//ok
+//ok updated
 // Mutation Operator
 Solution mutate(const Solution &parent, const vector<Customer> &customers, int vehicleCapacity, int depotCloseTime, int objective) {
     Solution solution = parent;
@@ -395,7 +396,7 @@ Solution mutate(const Solution &parent, const vector<Customer> &customers, int v
     return solution;
 }
 
-//ok
+//ok updated
 // Function to Generate Initial Population
 std::vector<Route> generateInitialPopulation(
     const std::vector<Customer> &customers,
